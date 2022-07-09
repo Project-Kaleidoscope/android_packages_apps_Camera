@@ -36,10 +36,10 @@ import androidx.camera.core.ImageCapture
 import androidx.camera.video.Quality
 import androidx.camera.video.QualitySelector
 import app.grapheneos.camera.CamConfig
-import app.grapheneos.camera.R
-import app.grapheneos.camera.databinding.SettingsBinding
 import app.grapheneos.camera.ui.activities.MainActivity
 import app.grapheneos.camera.ui.activities.MoreSettings
+import ink.kscope.camera.R
+import ink.kscope.camera.databinding.SettingsBinding
 
 class SettingsDialog(val mActivity: MainActivity) :
     Dialog(mActivity, R.style.Theme_App) {

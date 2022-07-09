@@ -12,8 +12,8 @@ import android.util.AttributeSet
 import android.view.ScaleGestureDetector.SimpleOnScaleGestureListener
 
 import androidx.appcompat.widget.AppCompatImageView
-import app.grapheneos.camera.R
 import app.grapheneos.camera.ui.activities.InAppGallery
+import ink.kscope.camera.R
 import kotlin.math.abs
 
 class ZoomableImageView @JvmOverloads constructor(

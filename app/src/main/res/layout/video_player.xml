@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:background="@color/system_neutral1_900"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.activities.VideoPlayer">
+    tools:context="app.grapheneos.camera.ui.activities.VideoPlayer">
 
     <VideoView
         android:id="@+id/video_player"

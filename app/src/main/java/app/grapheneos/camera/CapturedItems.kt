@@ -14,6 +14,7 @@ import android.provider.MediaStore
 import android.util.Log
 import app.grapheneos.camera.CamConfig.SettingValues
 import app.grapheneos.camera.util.edit
+import ink.kscope.camera.BuildConfig
 import kotlin.jvm.Throws
 
 typealias ItemType = Int

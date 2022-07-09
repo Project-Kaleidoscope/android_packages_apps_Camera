@@ -32,10 +32,10 @@ import app.grapheneos.camera.CapturedItems
 import app.grapheneos.camera.GSlideTransformer
 import app.grapheneos.camera.GallerySliderAdapter
 import app.grapheneos.camera.ITEM_TYPE_VIDEO
-import app.grapheneos.camera.R
-import app.grapheneos.camera.databinding.GalleryBinding
 import app.grapheneos.camera.util.storageLocationToUiString
 import com.google.android.material.snackbar.Snackbar
+import ink.kscope.camera.R
+import ink.kscope.camera.databinding.GalleryBinding
 import java.io.FileNotFoundException
 import java.text.SimpleDateFormat
 import java.util.Date

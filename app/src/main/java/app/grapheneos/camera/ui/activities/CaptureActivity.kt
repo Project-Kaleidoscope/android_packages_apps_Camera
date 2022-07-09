@@ -18,7 +18,7 @@ import androidx.camera.core.ImageCapture
 import androidx.camera.core.ImageCaptureException
 import androidx.camera.core.ImageProxy
 import androidx.core.content.ContextCompat
-import app.grapheneos.camera.R
+import ink.kscope.camera.R
 import java.io.ByteArrayOutputStream
 import java.lang.Exception
 import java.nio.ByteBuffer

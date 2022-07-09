@@ -8,8 +8,8 @@ import android.os.Looper
 import android.widget.MediaController
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import app.grapheneos.camera.R
-import app.grapheneos.camera.databinding.VideoPlayerBinding
+import ink.kscope.camera.R
+import ink.kscope.camera.databinding.VideoPlayerBinding
 
 class VideoPlayer : AppCompatActivity() {
 

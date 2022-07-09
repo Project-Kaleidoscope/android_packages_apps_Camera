@@ -2,9 +2,9 @@ package app.grapheneos.camera.ui
 
 import android.content.Context
 import android.util.AttributeSet
-import app.grapheneos.camera.R
 import app.grapheneos.camera.ui.activities.MainActivity
 import com.google.android.material.imageview.ShapeableImageView
+import ink.kscope.camera.R
 
 class QRToggle @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null

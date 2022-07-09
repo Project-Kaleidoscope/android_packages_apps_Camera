@@ -24,13 +24,13 @@ import androidx.camera.video.VideoRecordEvent
 import app.grapheneos.camera.CamConfig
 import app.grapheneos.camera.CapturedItem
 import app.grapheneos.camera.ITEM_TYPE_VIDEO
-import app.grapheneos.camera.R
 import app.grapheneos.camera.VIDEO_NAME_PREFIX
 import app.grapheneos.camera.ui.activities.MainActivity
 import app.grapheneos.camera.ui.activities.SecureMainActivity
 import app.grapheneos.camera.ui.activities.VideoCaptureActivity
 import app.grapheneos.camera.util.getTreeDocumentUri
 import app.grapheneos.camera.util.removePendingFlagFromUri
+import ink.kscope.camera.R
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale

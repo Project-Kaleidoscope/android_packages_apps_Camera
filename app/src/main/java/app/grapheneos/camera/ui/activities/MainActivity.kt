@@ -71,13 +71,10 @@ import app.grapheneos.camera.CamConfig
 import app.grapheneos.camera.CameraMode
 import app.grapheneos.camera.ITEM_TYPE_IMAGE
 import app.grapheneos.camera.ITEM_TYPE_VIDEO
-import app.grapheneos.camera.R
 import app.grapheneos.camera.capturer.ImageCapturer
 import app.grapheneos.camera.capturer.VideoCapturer
 import app.grapheneos.camera.capturer.getVideoThumbnail
 import app.grapheneos.camera.capturer.isTakingPicture
-import app.grapheneos.camera.databinding.ActivityMainBinding
-import app.grapheneos.camera.databinding.ScanResultDialogBinding
 import app.grapheneos.camera.notifier.SensorOrientationChangeNotifier
 import app.grapheneos.camera.ui.BottomTabLayout
 import app.grapheneos.camera.ui.CountDownTimerUI
@@ -93,6 +90,9 @@ import com.google.android.material.imageview.ShapeableImageView
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.tabs.TabLayout
 import com.google.zxing.BarcodeFormat
+import ink.kscope.camera.R
+import ink.kscope.camera.databinding.ActivityMainBinding
+import ink.kscope.camera.databinding.ScanResultDialogBinding
 import java.io.File
 import java.nio.charset.StandardCharsets
 import java.util.concurrent.Executors
@@ -1298,7 +1298,7 @@ open class MainActivity : AppCompatActivity(),
     lateinit var camConfig: CamConfig
 
     companion object {
-        private const val TAG = "GOCam"
+        private const val TAG = "KaleidoscopeCam"
         private const val autoCenterFocusDuration = 2000L
         private val hexArray = "0123456789ABCDEF".toCharArray()
 

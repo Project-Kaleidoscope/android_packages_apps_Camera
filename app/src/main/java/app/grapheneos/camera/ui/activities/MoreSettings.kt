@@ -1,6 +1,5 @@
 package app.grapheneos.camera.ui.activities
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.graphics.Rect
@@ -19,10 +18,10 @@ import androidx.appcompat.app.AppCompatActivity
 import app.grapheneos.camera.CamConfig
 import app.grapheneos.camera.CapturedItems
 import app.grapheneos.camera.NumInputFilter
-import app.grapheneos.camera.R
-import app.grapheneos.camera.databinding.MoreSettingsBinding
 import app.grapheneos.camera.util.storageLocationToUiString
 import com.google.android.material.snackbar.Snackbar
+import ink.kscope.camera.R
+import ink.kscope.camera.databinding.MoreSettingsBinding
 
 open class MoreSettings : AppCompatActivity(), TextView.OnEditorActionListener {
     private lateinit var camConfig: CamConfig

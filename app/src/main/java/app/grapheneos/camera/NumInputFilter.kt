@@ -3,6 +3,7 @@ package app.grapheneos.camera
 import android.text.InputFilter
 import android.text.Spanned
 import app.grapheneos.camera.ui.activities.MoreSettings
+import ink.kscope.camera.R
 
 class NumInputFilter(private val settings: MoreSettings) : InputFilter {
 

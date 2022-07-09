@@ -23,13 +23,6 @@ android {
                 keyAlias = keystoreProperties["keyAlias"] as String
                 keyPassword = keystoreProperties["keyPassword"] as String
             }
-
-            create("play") {
-                storeFile = rootProject.file(keystoreProperties["storeFile"]!!)
-                storePassword = keystoreProperties["storePassword"] as String
-                keyAlias = keystoreProperties["uploadKeyAlias"] as String
-                keyPassword = keystoreProperties["uploadKeyPassword"] as String
-            }
         }
     }
 
@@ -37,11 +30,12 @@ android {
     buildToolsVersion = "32.0.0"
 
     defaultConfig {
-        applicationId = "app.grapheneos.camera"
+        applicationId = "ink.kscope.camera"
         minSdk = 29
         targetSdk = 32
         versionCode = 43
         versionName = versionCode.toString()
+        resValue("string", "app_name", "Camera")
     }
 
     buildTypes {
@@ -51,21 +45,6 @@ android {
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
             if (useKeystoreProperties) {
                 signingConfig = signingConfigs.getByName("release")
-            }
-            resValue("string", "app_name", "Camera")
-        }
-
-        getByName("debug") {
-            applicationIdSuffix = ".dev"
-            resValue("string", "app_name", "Camera d")
-            // isDebuggable = false
-        }
-
-        create("play") {
-            initWith(getByName("release"))
-            applicationIdSuffix = ".play"
-            if (useKeystoreProperties) {
-                signingConfig = signingConfigs.getByName("play")
             }
         }
     }

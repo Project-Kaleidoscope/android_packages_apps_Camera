@@ -17,7 +17,6 @@ import android.view.animation.AlphaAnimation
 import android.view.animation.Animation
 import android.view.animation.LinearInterpolator
 import android.widget.Button
-import android.widget.FrameLayout
 import androidx.annotation.StringRes
 import androidx.camera.camera2.interop.Camera2Interop
 import androidx.camera.core.AspectRatio
@@ -47,6 +46,7 @@ import app.grapheneos.camera.ui.activities.VideoCaptureActivity
 import app.grapheneos.camera.ui.activities.VideoOnlyActivity
 import app.grapheneos.camera.util.edit
 import com.google.zxing.BarcodeFormat
+import ink.kscope.camera.R
 import java.util.concurrent.ExecutionException
 import java.util.concurrent.Executors
 

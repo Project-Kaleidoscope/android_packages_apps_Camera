@@ -3,6 +3,7 @@ package app.grapheneos.camera
 import android.media.MediaPlayer
 import android.os.SystemClock
 import app.grapheneos.camera.ui.activities.MainActivity
+import ink.kscope.camera.R
 
 class TunePlayer(val context: MainActivity) {
 

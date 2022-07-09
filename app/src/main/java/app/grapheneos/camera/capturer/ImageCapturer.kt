@@ -13,15 +13,14 @@ import android.view.View
 import android.view.animation.AlphaAnimation
 import android.view.animation.Animation
 import android.view.animation.LinearInterpolator
-import android.widget.FrameLayout
 import androidx.camera.core.CameraSelector
 import androidx.camera.core.ImageCapture
 import androidx.camera.core.ImageCaptureException
 import app.grapheneos.camera.App
 import app.grapheneos.camera.CapturedItem
-import app.grapheneos.camera.R
 import app.grapheneos.camera.ui.activities.MainActivity
 import app.grapheneos.camera.ui.activities.SecureMainActivity
+import ink.kscope.camera.R
 
 private const val imageFileFormat = ".jpg"
 var isTakingPicture: Boolean = false

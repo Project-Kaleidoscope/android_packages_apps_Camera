@@ -1,7 +1,7 @@
 package app.grapheneos.camera.ui.activities
 
 import android.os.Bundle
-import app.grapheneos.camera.R
+import ink.kscope.camera.R
 
 class VideoOnlyActivity : MainActivity() {
 

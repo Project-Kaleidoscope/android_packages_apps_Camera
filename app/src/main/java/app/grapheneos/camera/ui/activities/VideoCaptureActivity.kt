@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.provider.MediaStore.EXTRA_OUTPUT
 import android.view.View
 import android.widget.ImageView
-import app.grapheneos.camera.R
+import ink.kscope.camera.R
 
 class VideoCaptureActivity : CaptureActivity() {
 
