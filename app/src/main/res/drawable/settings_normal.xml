@@ -6,11 +6,13 @@
                 android:height="12dp"
                 android:width="28dp"/>
             <padding
-                android:left="8dp"
-                android:right="8dp"/>
+                android:left="12dp"
+                android:right="12dp"
+                android:bottom="4dp"
+                android:top="4dp"/>
             <solid android:color="@color/unselected_option_bg"/>
             <corners android:radius="100dp"/>
         </shape>
     </item>
-    <item android:drawable="@drawable/dropdown"/>
+    <item android:drawable="@drawable/settings"/>
 </layer-list>

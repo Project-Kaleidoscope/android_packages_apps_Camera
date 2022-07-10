@@ -10,10 +10,9 @@
             <stroke
                 android:color="@color/white"
                 android:width="4dp"/>
-            <solid android:color="@color/unselected_option_bg"/>
+            <solid android:color="#808080"/>
         </shape>
     </item>
-
 
     <item
         android:drawable="@drawable/torch_on"
