@@ -181,4 +181,13 @@
 
     <string name="zsl_setting_title">Use ZSL in Latency mode</string>
     <string name="zsl_setting_desc">Uses Zero Shutter Lag (ZSL) in Latency mode for faster capture. Certain devices may have a buggy implementation for this.</string>
+
+    <string name="shortcut_camera_mode">Camera</string>
+    <string name="shortcut_video_mode">Video</string>
+    <string name="shortcut_scanner_mode">Scanner</string>
+    <string name="shortcut_face_retouch_mode">Face Retouch</string>
+    <string name="shortcut_portrait_mode">Portrait</string>
+    <string name="shortcut_hdr_mode">HDR</string>
+    <string name="shortcut_night_mode">Night</string>
+    <string name="shortcut_auto_mode">Auto</string>
 </resources>

@@ -3,17 +3,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="ink.kscope.camera">
 
-    <uses-feature android:name="android.hardware.camera.any"/>
+    <uses-feature android:name="android.hardware.camera.any" />
 
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
-    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
 
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
-    <uses-permission android:name="android.permission.WAKE_LOCK"/>
-    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
 
 
     <application
@@ -21,8 +21,8 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/full_backup_content"
         android:icon="@mipmap/ic_launcher"
-        android:resizeableActivity="false"
         android:label="@string/app_name"
+        android:resizeableActivity="false"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.App"
@@ -30,35 +30,39 @@
 
         <uses-library
             android:name="androidx.camera.extensions.impl"
-            android:required="false"/>
+            android:required="false" />
 
         <!-- The main activity of the app (supports all modes) -->
         <activity
             android:name="app.grapheneos.camera.ui.activities.MainActivity"
-            android:taskAffinity="app.grapheneos.camera.ui.activities.MainActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:exported="true"
             android:screenOrientation="nosensor"
-            android:exported="true">
+            android:taskAffinity="app.grapheneos.camera.ui.activities.MainActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
 
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts" />
         </activity>
 
         <!-- Helps in supporting double-tap power button (in non-secure/unlocked phone state) -->
         <activity-alias
             android:name="app.grapheneos.camera.ui.activities.CameraLauncher"
+            android:exported="true"
             android:label="@string/app_name"
-            android:targetActivity="app.grapheneos.camera.ui.activities.MainActivity"
-            android:exported="true">
+            android:targetActivity="app.grapheneos.camera.ui.activities.MainActivity">
 
             <intent-filter>
-                <action android:name="android.media.action.STILL_IMAGE_CAMERA"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.media.action.STILL_IMAGE_CAMERA" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
 
         </activity-alias>
@@ -66,17 +70,17 @@
         <!-- The main activity of the app (supports all modes) -->
         <activity
             android:name="app.grapheneos.camera.ui.activities.SecureMainActivity"
-            android:taskAffinity="app.grapheneos.camera.ui.activities.SecureMainActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:excludeFromRecents="true"
+            android:exported="true"
             android:screenOrientation="nosensor"
             android:showWhenLocked="true"
-            android:excludeFromRecents="true"
-            android:exported="true">
+            android:taskAffinity="app.grapheneos.camera.ui.activities.SecureMainActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
 
             <intent-filter>
-                <action android:name="android.media.action.STILL_IMAGE_CAMERA_SECURE"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.media.action.STILL_IMAGE_CAMERA_SECURE" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
 
         </activity>
@@ -86,15 +90,15 @@
         -->
         <activity
             android:name="app.grapheneos.camera.ui.activities.VideoOnlyActivity"
-            android:taskAffinity="app.grapheneos.camera.ui.activities.VideoOnlyActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:exported="true"
             android:screenOrientation="nosensor"
-            android:exported="true">
+            android:taskAffinity="app.grapheneos.camera.ui.activities.VideoOnlyActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
 
             <intent-filter>
-                <action android:name="android.media.action.VIDEO_CAMERA"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.media.action.VIDEO_CAMERA" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
 
         </activity>
@@ -106,14 +110,14 @@
         <activity
             android:name="app.grapheneos.camera.ui.activities.CaptureActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:exported="true"
             android:screenOrientation="nosensor"
             android:visibleToInstantApps="true"
-            android:exported="true">
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
 
             <intent-filter>
-                <action android:name="android.media.action.IMAGE_CAPTURE"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.media.action.IMAGE_CAPTURE" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
 
         </activity>
@@ -123,17 +127,17 @@
          -->
         <activity
             android:name="app.grapheneos.camera.ui.activities.SecureCaptureActivity"
-            android:taskAffinity="app.grapheneos.camera.ui.activities.SecureCaptureActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:excludeFromRecents="true"
+            android:exported="true"
             android:screenOrientation="nosensor"
             android:showWhenLocked="true"
-            android:excludeFromRecents="true"
-            android:exported="true">
+            android:taskAffinity="app.grapheneos.camera.ui.activities.SecureCaptureActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
 
             <intent-filter>
-                <action android:name="android.media.action.IMAGE_CAPTURE_SECURE"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.media.action.IMAGE_CAPTURE_SECURE" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
 
         </activity>
@@ -143,49 +147,121 @@
              (No secure video capture intent is present/defined in Android)-->
         <activity
             android:name="app.grapheneos.camera.ui.activities.VideoCaptureActivity"
-            android:taskAffinity="app.grapheneos.camera.ui.activities.VideoCaptureActivity"
-            android:label="@string/video_capture_label"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:exported="true"
+            android:label="@string/video_capture_label"
             android:screenOrientation="nosensor"
+            android:taskAffinity="app.grapheneos.camera.ui.activities.VideoCaptureActivity"
             android:visibleToInstantApps="true"
-            android:exported="true">
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
 
             <intent-filter>
-                <action android:name="android.media.action.VIDEO_CAPTURE"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.media.action.VIDEO_CAPTURE" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
 
         </activity>
 
         <activity
             android:name="app.grapheneos.camera.ui.activities.VideoPlayer"
-            android:theme="@style/OverlayActionBar"
-            android:taskAffinity="app.grapheneos.camera.ui.activities.VideoPlayer"
             android:excludeFromRecents="true"
-            android:exported="false"/>
+            android:exported="false"
+            android:taskAffinity="app.grapheneos.camera.ui.activities.VideoPlayer"
+            android:theme="@style/OverlayActionBar" />
 
         <activity
             android:name="app.grapheneos.camera.ui.activities.InAppGallery"
-            android:theme="@style/OverlayActionBar"
-            android:taskAffinity="app.grapheneos.camera.ui.activities.InAppGallery"
             android:excludeFromRecents="true"
-            android:exported="false"/>
+            android:exported="false"
+            android:taskAffinity="app.grapheneos.camera.ui.activities.InAppGallery"
+            android:theme="@style/OverlayActionBar" />
 
         <activity
             android:name="app.grapheneos.camera.ui.activities.MoreSettings"
-            android:theme="@style/OverlayActionBar"
-            android:taskAffinity="app.grapheneos.camera.ui.activities.InAppGallery"
             android:excludeFromRecents="true"
-            android:exported="false"/>
+            android:exported="false"
+            android:taskAffinity="app.grapheneos.camera.ui.activities.InAppGallery"
+            android:theme="@style/OverlayActionBar" />
 
         <activity
             android:name="app.grapheneos.camera.ui.activities.MoreSettingsSecure"
-            android:theme="@style/OverlayActionBar"
-            android:taskAffinity="app.grapheneos.camera.ui.activities.InAppGallery"
             android:excludeFromRecents="true"
+            android:exported="false"
             android:showWhenLocked="true"
-            android:exported="false"/>
+            android:taskAffinity="app.grapheneos.camera.ui.activities.InAppGallery"
+            android:theme="@style/OverlayActionBar" />
+
+        <activity
+            android:name=".ui.activities.CameraActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:screenOrientation="nosensor"
+            android:showWhenLocked="true"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+
+        <activity
+            android:name=".ui.activities.VideoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:screenOrientation="nosensor"
+            android:showWhenLocked="true"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+
+        <activity
+            android:name=".ui.activities.ScannerActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:screenOrientation="nosensor"
+            android:showWhenLocked="true"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+
+        <activity
+            android:name=".ui.activities.PortraitActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:screenOrientation="nosensor"
+            android:showWhenLocked="true"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+
+        <activity
+            android:name=".ui.activities.AutoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:screenOrientation="nosensor"
+            android:showWhenLocked="true"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+
+        <activity
+            android:name=".ui.activities.HDRActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:screenOrientation="nosensor"
+            android:showWhenLocked="true"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+
+        <activity
+            android:name=".ui.activities.NightActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:screenOrientation="nosensor"
+            android:showWhenLocked="true"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+
+        <activity
+            android:name=".ui.activities.FaceRetouchActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:screenOrientation="nosensor"
+            android:showWhenLocked="true"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
 
     </application>
 

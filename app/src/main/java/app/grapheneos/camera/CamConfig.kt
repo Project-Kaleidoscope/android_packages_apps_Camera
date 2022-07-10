@@ -1273,7 +1273,7 @@ class CamConfig(private val mActivity: MainActivity) {
                 }
                 tab.tag = mode
 
-                tabLayout.addTab(tab, mode == DEFAULT_CAMERA_MODE)
+                tabLayout.addTab(tab, mode == currentMode)
             }
         }
     }

@@ -973,6 +973,17 @@ open class MainActivity : AppCompatActivity(),
         gRightDash = binding.gCircleRightDash
 
         gCircleFrame = binding.gCircleFrame
+
+        val camMode = intent.getSerializableExtra("mode")
+        if (camMode != null) {
+            // Make sure the extra mode is in enum
+            CameraMode.values().forEach { mode ->
+                if (mode == camMode) {
+                    camConfig.switchMode(mode)
+                    return@forEach
+                }
+            }
+        }
     }
 
     private fun getStatusBarHeight(): Int {
