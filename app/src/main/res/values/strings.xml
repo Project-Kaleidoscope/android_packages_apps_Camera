@@ -1,23 +1,19 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="camera_permission_dialog_title">Camera permission required</string>
-    <string name="camera_permission_dialog_message">
-        The app needs permission to access the camera to function. Please provide the required permission via Settings in order to use this app.
-    </string>
+    <string name="camera_permission_dialog_message">The app needs permission to access the camera to function. Please provide the required permission via Settings in order to use this app.</string>
 
     <string name="audio_permission_dialog_title">Audio permission required</string>
     <string name="audio_permission_dialog_message">The app needs permission to access the microphone to record a video that contains audio. Please provide the required permission via Settings in order to proceed with this configuration. If you do not require your video to contain audio, you could just disable it (and enable it back later in the settings).</string>
 
     <string name="location_permission_dialog_title">Location permission required</string>
-    <string name="location_permission_dialog_message">
-        The app needs location permission for geo-tagging. Please provide the required permission via Settings in order to use this app.
-    </string>
+    <string name="location_permission_dialog_message">The app needs location permission for geo-tagging. Please provide the required permission via Settings in order to use this app.</string>
 
     <string name="focus_ring">Focus Ring</string>
     <string name="flip_camera">Flip Camera</string>
     <string name="loading_camera">Loading camera</string>
     <string name="flash_mode">Flash Mode</string>
     <string name="capture_mode">Capture Mode</string>
-    <string name="start_value_timer">00:00</string>
+    <string name="start_value_timer" translatable="false">00:00</string>
     <string name="zoom_in">Zoom In</string>
     <string name="zoom_out">Zoom Out</string>
     <string name="scan_result">Scan Result</string>
@@ -52,9 +48,9 @@
     <string name="night_mode">NIGHT</string>
     <string name="face_retouch_mode">FACE RETOUCH</string>
     <string name="auto_mode">AUTO</string>
-    <string name="qr_scan_mode">QR SCAN</string>
-    <string name="aspect_ratio_16_9">16:9</string>
-    <string name="aspect_ratio_4_3">4:3</string>
+    <string name="qr_scan_mode">SCANNER</string>
+    <string name="aspect_ratio_16_9" translatable="false">16:9</string>
+    <string name="aspect_ratio_4_3" translatable="false">4:3</string>
     <string name="share_media">Share Media</string>
     <string name="rec_without_audio">Start recording without audio</string>
     <string name="qr_scan_toggle">QR Scan toggle</string>
@@ -87,8 +83,8 @@
     <string name="photo">Photo</string>
     <string name="remove_exif_title">Remove EXIF data after capture</string>
     <string name="remove_exif_subtitle">Note: Geo-tagging/Location option is independent of this setting</string>
-    <string name="degree_format">%d°</string>
-    <string name="percent_symbol">%</string>
+    <string name="degree_format" translatable="false">%d°</string>
+    <string name="percent_symbol" translatable="false">%</string>
 
     <string name="location_is_disabled">Location is disabled</string>
     <string name="settings">Settings</string>
