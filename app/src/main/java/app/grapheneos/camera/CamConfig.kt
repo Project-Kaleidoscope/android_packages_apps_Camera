@@ -1283,6 +1283,8 @@ class CamConfig(private val mActivity: MainActivity) {
             return
         }
 
+        mActivity.vibrateDevice()
+
         currentMode = mode
 
         mActivity.cancelFocusTimer()

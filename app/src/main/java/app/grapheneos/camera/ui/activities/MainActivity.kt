@@ -1563,7 +1563,7 @@ open class MainActivity : AppCompatActivity(),
     }
 
     // Vibrates the device for 100 milliseconds.
-    private fun vibrateDevice() {
+    public fun vibrateDevice() {
         val vibrator = getSystemService(Vibrator::class.java)
         vibrator?.vibrate(VibrationEffect.createOneShot(50, 10))
     }
