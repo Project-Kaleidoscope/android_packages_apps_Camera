@@ -3,9 +3,11 @@ package app.grapheneos.camera.ui
 import android.content.Context
 import android.util.AttributeSet
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.core.view.ViewCompat
 import app.grapheneos.camera.CameraMode
 import com.google.android.material.tabs.TabLayout
+import ink.kscope.camera.R
 
 class BottomTabLayout @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null
@@ -50,6 +52,7 @@ class BottomTabLayout @JvmOverloads constructor(
     }
 
     private fun centerSelectedTab() {
+        setTextShadow()
         getTabAt(selectedTabPosition)?.let {
             centerTab(it)
         }
@@ -57,6 +60,8 @@ class BottomTabLayout @JvmOverloads constructor(
 
     override fun onScrollChanged(x: Int, y: Int, oldX: Int, oldY: Int) {
         super.onScrollChanged(x, y, oldX, oldY)
+
+        setTextShadow()
 
         if (snapPoints.last() != 0) {
 
@@ -125,5 +130,21 @@ class BottomTabLayout @JvmOverloads constructor(
         return IntRange(0, tabCount - 1).map {
             getTabAt(it)!!.tag as CameraMode
         }.toSet()
+    }
+
+    private fun getAllTabs(): Set<Tab> {
+        return IntRange(0, tabCount - 1).map {
+            getTabAt(it)!!
+        }.toSet()
+    }
+
+    private fun setTextShadow() {
+        val tabs = getAllTabs()
+        for (tab in tabs) {
+            val tabText = tab.view.getChildAt(1) as TextView
+            tabText.setTextAppearance(R.style.TabText)
+        }
+        val selectedTabText = selectedTab?.view?.getChildAt(1) as TextView
+        selectedTabText.setTextAppearance(R.style.TabTextSelected)
     }
 }
