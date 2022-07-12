@@ -14,6 +14,7 @@ import android.view.animation.AlphaAnimation
 import android.view.animation.Animation
 import android.view.animation.LinearInterpolator
 import androidx.camera.core.CameraSelector
+import androidx.camera.core.CameraState
 import androidx.camera.core.ImageCapture
 import androidx.camera.core.ImageCaptureException
 import app.grapheneos.camera.App
@@ -53,6 +54,10 @@ class ImageCapturer(val mActivity: MainActivity) {
     @SuppressLint("RestrictedApi")
     fun takePicture() {
         if (camConfig.camera == null) {
+            return
+        }
+
+        if (camConfig.camera!!.cameraInfo.cameraState.value?.type != CameraState.Type.OPEN) {
             return
         }
 
