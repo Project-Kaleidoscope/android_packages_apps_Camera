@@ -971,6 +971,12 @@ class CamConfig(private val mActivity: MainActivity) {
     fun startCamera(forced: Boolean = false) {
         if ((!forced && camera != null) || cameraProvider == null) return
 
+        mActivity.previewView.scaleType = if (aspectRatio == AspectRatio.RATIO_16_9) {
+            PreviewView.ScaleType.FIT_START
+        } else {
+            PreviewView.ScaleType.FIT_CENTER
+        }
+
         mActivity.exposureBar.hidePanel()
         modePref = mActivity.getSharedPreferences(currentMode.name, Context.MODE_PRIVATE)
 
@@ -1313,7 +1319,6 @@ class CamConfig(private val mActivity: MainActivity) {
             mActivity.thirdOption.visibility = View.VISIBLE
             mActivity.flipCamIcon.setImageResource(R.drawable.flip_camera)
             mActivity.cancelButtonView.visibility = View.VISIBLE
-            mActivity.previewView.scaleType = PreviewView.ScaleType.FIT_START
 
             mActivity.qrScanToggles.visibility = View.GONE
 

@@ -45,6 +45,8 @@ class CustomGrid @JvmOverloads constructor(
             mActivity.previewView.width * 4 / 3
         }
 
+        val previewPaddingTop = (mActivity.previewView.height - previewHeight) / 2
+
         if (camConfig.gridType == CamConfig.GridType.GOLDEN_RATIO) {
 
             val cx = width / 2f
@@ -53,10 +55,34 @@ class CustomGrid @JvmOverloads constructor(
             val dxH = width / 8f
             val dyH = previewHeight / 8f
 
-            canvas.drawLine(cx - dxH, 0f, cx - dxH, previewHeight.toFloat(), paint)
-            canvas.drawLine(cx + dxH, 0f, cx + dxH, previewHeight.toFloat(), paint)
-            canvas.drawLine(0f, cy - dyH, width.toFloat(), cy - dyH, paint)
-            canvas.drawLine(0f, cy + dyH, width.toFloat(), cy + dyH, paint)
+            canvas.drawLine(
+                cx - dxH,
+                previewPaddingTop.toFloat(),
+                cx - dxH,
+                (previewHeight + previewPaddingTop).toFloat(),
+                paint
+            )
+            canvas.drawLine(
+                cx + dxH,
+                previewPaddingTop.toFloat(),
+                cx + dxH,
+                (previewHeight + previewPaddingTop).toFloat(),
+                paint
+            )
+            canvas.drawLine(
+                0f,
+                cy - dyH + previewPaddingTop,
+                width.toFloat(),
+                cy - dyH + previewPaddingTop,
+                paint
+            )
+            canvas.drawLine(
+                0f,
+                cy + dyH + previewPaddingTop,
+                width.toFloat(),
+                cy + dyH + previewPaddingTop,
+                paint
+            )
 
         } else {
 
@@ -68,29 +94,47 @@ class CustomGrid @JvmOverloads constructor(
 
             canvas.drawLine(
                 width / seed * 2f,
-                0f,
+                previewPaddingTop.toFloat(),
                 width / seed * 2f,
-                previewHeight.toFloat(),
+                (previewHeight + previewPaddingTop).toFloat(),
                 paint
             )
-            canvas.drawLine(width / seed, 0f, width / seed, previewHeight.toFloat(), paint)
             canvas.drawLine(
-                0f, previewHeight / seed * 2f,
-                width.toFloat(), previewHeight / seed * 2f, paint
+                width / seed,
+                previewPaddingTop.toFloat(),
+                width / seed,
+                (previewHeight + previewPaddingTop).toFloat(),
+                paint
             )
-            canvas.drawLine(0f, previewHeight / seed, width.toFloat(), previewHeight / seed, paint)
+            canvas.drawLine(
+                0f,
+                previewHeight / seed * 2f + previewPaddingTop,
+                width.toFloat(),
+                previewHeight / seed * 2f + previewPaddingTop,
+                paint
+            )
+            canvas.drawLine(
+                0f,
+                previewHeight / seed + previewPaddingTop,
+                width.toFloat(),
+                previewHeight / seed + previewPaddingTop,
+                paint
+            )
 
             if (seed == 4f) {
                 canvas.drawLine(
                     width / seed * 3f,
-                    0f,
+                    previewPaddingTop.toFloat(),
                     width / seed * 3f,
-                    previewHeight.toFloat(),
+                    (previewHeight + previewPaddingTop).toFloat(),
                     paint
                 )
                 canvas.drawLine(
-                    0f, previewHeight / seed * 3f,
-                    width.toFloat(), previewHeight / seed * 3f, paint
+                    0f,
+                    previewHeight / seed * 3f + previewPaddingTop,
+                    width.toFloat(),
+                    previewHeight / seed * 3f + previewPaddingTop,
+                    paint
                 )
             }
         }
