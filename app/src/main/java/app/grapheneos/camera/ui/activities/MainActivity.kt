@@ -871,17 +871,17 @@ open class MainActivity : AppCompatActivity(),
             }
 
             if (insets.top != 0 && !isInsetSet) {
-                mainFrame.layoutParams =
-                    (mainFrame.layoutParams as ViewGroup.MarginLayoutParams).let {
-                        it.setMargins(
-                            it.leftMargin,
-                            (8 * resources.displayMetrics.density.toInt()) + insets.top,
-                            it.rightMargin,
-                            it.bottomMargin,
-                        )
-
-                        it
-                    }
+//                mainFrame.layoutParams =
+//                    (mainFrame.layoutParams as ViewGroup.MarginLayoutParams).let {
+//                        it.setMargins(
+//                            it.leftMargin,
+//                            (8 * resources.displayMetrics.density.toInt()) + insets.top,
+//                            it.rightMargin,
+//                            it.bottomMargin,
+//                        )
+//
+//                        it
+//                    }
 
                 qrScanToggles.layoutParams =
                     (qrScanToggles.layoutParams as ViewGroup.MarginLayoutParams).let {
