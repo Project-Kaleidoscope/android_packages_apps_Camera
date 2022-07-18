@@ -16,7 +16,6 @@ android_app {
         "app/src/main/**/*.java",
         "app/src/main/**/*.kt",
         "aosp/java/**/*.java",
-        "aosp/databinding/**/*.java",
     ],
     system_ext_specific: true,
 
@@ -32,10 +31,14 @@ android_app {
         "androidx.camera_camera-video",
         "androidx.camera_camera-view",
         "androidx.camera_camera-extensions",
-        "androidx.databinding_viewbinding",
     ],
     optional_uses_libs: ["androidx.camera.extensions.impl"],
     optimize: {
         enabled: false,
     },
+
+    data_binding: {
+        package_name: "ink.kscope.camera",
+        view_binding: true,
+    }
 }
