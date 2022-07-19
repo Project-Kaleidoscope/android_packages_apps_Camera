@@ -156,4 +156,12 @@
     <string name="main_storage">主儲存空間</string>
     <string name="zsl_setting_title">在延遲模式下使用 ZSL</string>
     <string name="zsl_setting_desc">在延遲模式下使用零快門延遲 (ZSL) 以加快捕捉速度。 某些設備可能對此有錯誤的實現。</string>
+    <string name="shortcut_camera_mode">相機</string>
+    <string name="shortcut_video_mode">影片</string>
+    <string name="shortcut_scanner_mode">掃描</string>
+    <string name="shortcut_face_retouch_mode">美顏</string>
+    <string name="shortcut_portrait_mode">人像</string>
+    <string name="shortcut_hdr_mode">HDR</string>
+    <string name="shortcut_night_mode">夜景</string>
+    <string name="shortcut_auto_mode">自動</string>
 </resources>

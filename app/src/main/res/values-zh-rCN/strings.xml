@@ -156,4 +156,12 @@
     <string name="main_storage">主存储</string>
     <string name="zsl_setting_title">零延迟拍摄</string>
     <string name="zsl_setting_desc">在降低延迟的优化模式中使用零延迟拍摄（ZSL）技术来加快拍摄速度。可能会在部分设备上出现问题。</string>
+    <string name="shortcut_camera_mode">相机</string>
+    <string name="shortcut_video_mode">视频</string>
+    <string name="shortcut_scanner_mode">扫描器</string>
+    <string name="shortcut_face_retouch_mode">美颜</string>
+    <string name="shortcut_portrait_mode">人像</string>
+    <string name="shortcut_hdr_mode">HDR</string>
+    <string name="shortcut_night_mode">夜景</string>
+    <string name="shortcut_auto_mode">自动</string>
 </resources>
